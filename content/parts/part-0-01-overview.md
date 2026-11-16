@@ -73,7 +73,7 @@ Intel 칩 Mac은 앱을 설치하지 말고 교육 담당자에게 미리 알려
 
 ## 전체 준비 순서
 
-Codex는 새 ChatGPT 데스크톱 앱의 **Work** 화면에서 씁니다. 예전 앱 "ChatGPT Classic"에는 Codex가 없습니다.
+Codex는 새 ChatGPT 데스크톱 앱에 들어 있습니다. 앱 왼쪽 위 **ChatGPT** 를 눌러 **Codex** 로 바꿔서 씁니다. 예전 앱 "ChatGPT Classic"에는 Codex가 없습니다.
 
 막히는 곳이 없으면 준비에는 30분 정도 걸립니다.
 
@@ -82,10 +82,11 @@ Codex는 새 ChatGPT 데스크톱 앱의 **Work** 화면에서 씁니다. 예전
 | 1 | 노트북 사양 확인 | 위 사양표에 맞는지 확인됨 |
 | 2 | ChatGPT 데스크톱 앱 설치 | [Windows](#part-1-01-windows) 또는 [Mac](#part-1-02-mac) 안내를 마침 |
 | 3 | 회사 계정으로 로그인 | 회사 워크스페이스가 선택돼 있음 |
-| 4 | 바탕 화면에 `codex-교육` 폴더를 만들어 프로젝트로 연결 | 프로젝트 목록에 `codex-교육`이 보임 |
-| 5 | [첫 요청 보내기](#part-1-03-first-request) | 답이 오고 `hello.txt` 파일이 만들어짐 |
-| 6 | (선택) [미리 해 볼 것](#part-1-04-practice) | 연습 폴더를 계획 → 정리 → 확인 순서로 정리해 봄 |
-| 7 | [교육 전 점검표](#part-2-01-checklist) 확인 | 모든 항목에 체크 |
+| 4 | 왼쪽 위 ChatGPT를 눌러 Codex로 바꾸기 | 왼쪽 위에 Codex가 보임 |
+| 5 | 바탕 화면에 `codex-교육` 폴더를 만들어 프로젝트로 연결 | 프로젝트 목록에 `codex-교육`이 보임 |
+| 6 | [첫 요청 보내기](#part-1-03-first-request) | 답이 오고 `hello.txt` 파일이 만들어짐 |
+| 7 | (선택) [미리 해 볼 것](#part-1-04-practice) | 연습 폴더를 계획 → 정리 → 확인 순서로 정리해 봄 |
+| 8 | [교육 전 점검표](#part-2-01-checklist) 확인 | 모든 항목에 체크 |
 
 ---
 

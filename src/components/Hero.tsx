@@ -5,7 +5,7 @@ import { trackCtaClick } from '@/lib/analytics'
 
 const steps = [
   { num: '1', title: '앱 설치', desc: 'ChatGPT 데스크톱 앱을 내려받아 설치합니다' },
-  { num: '2', title: '로그인', desc: '회사 계정으로 로그인하고 Codex를 엽니다' },
+  { num: '2', title: '로그인', desc: '회사 계정으로 로그인하고, 왼쪽 위 ChatGPT를 눌러 Codex로 바꿉니다' },
   { num: '3', title: '폴더 연결', desc: 'codex-교육 폴더를 만들어 작업 폴더로 연결합니다' },
 ]
 
