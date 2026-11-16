@@ -93,7 +93,7 @@ export function CodeBlock(props: CodeBlockProps): JSX.Element {
         type="button"
         aria-label="코드 복사"
         onClick={handleCopy}
-        className="absolute top-2 right-2 z-10 inline-flex h-8 w-8 items-center justify-center rounded-md border border-zinc-200 bg-white/90 text-zinc-500 shadow-sm backdrop-blur transition-colors hover:border-brand-500 hover:text-brand-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:border-zinc-700 dark:bg-zinc-900/90 dark:text-zinc-300 dark:hover:border-brand-500 dark:hover:text-brand-400"
+        className="absolute top-2 right-2 z-10 inline-flex h-8 w-8 items-center justify-center rounded-md border border-zinc-200 bg-white/90 text-zinc-500 shadow-sm backdrop-blur transition-colors hover:border-brand-600 hover:text-brand-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 dark:border-ide-line dark:bg-ide-panel/90 dark:text-zinc-300 dark:hover:border-brand-500 dark:hover:text-brand-400"
       >
         <Clipboard className="h-4 w-4" aria-hidden="true" />
       </button>

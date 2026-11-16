@@ -1,9 +1,8 @@
+// 기본은 라이트 모드. 사용자가 다크를 직접 고른 경우에만 다크로 연다(시스템 설정은 따르지 않음).
 try {
-  var t = localStorage.getItem('theme');
-  var light = t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches);
-  if (light) {
-    document.documentElement.classList.remove('dark');
-  } else {
+  if (localStorage.getItem('theme') === 'dark') {
     document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
   }
-} catch(e) {}
+} catch (_) {}

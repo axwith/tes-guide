@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 
 interface SectionMeta {
   id: string
+  track: string
   tier: string
   title: string
   subtitle: string
@@ -12,11 +13,14 @@ interface SectionMeta {
 
 interface SectionsConfig {
   sections: SectionMeta[]
+  tracks: Record<string, { label: string }>
   tiers: Record<string, { label: string }>
 }
 
 interface SearchEntry {
   id: string
+  track: string
+  track_label: string
   tier: string
   tier_label: string
   title: string
@@ -44,6 +48,7 @@ function stripMarkdown(markdown: string): string {
     .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
     .replace(/^#{1,6}\s+/gm, '')
     .replace(/^>\s?/gm, '')
+    .replace(/<br\s*\/?>/gi, ' ')
     .replace(/^\s*[-*]\s+(\[[ x]\]\s+)?/gm, '')
     .replace(/^\|?\s*-{3,}.*$/gm, '')
     .replace(/[|*`_]/g, ' ')
@@ -69,6 +74,8 @@ function buildSearchIndex(): SearchEntry[] {
     const { headings, body } = readSection(section.file)
     return {
       id: section.id,
+      track: section.track,
+      track_label: config.tracks[section.track]?.label ?? '',
       tier: section.tier,
       tier_label: config.tiers[section.tier]?.label ?? '',
       title: section.title,

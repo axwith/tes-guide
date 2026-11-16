@@ -10,13 +10,23 @@ import {
 import { PageClient } from '@/components/PageClient'
 import { SectionBlock } from '@/components/SectionBlock'
 import { CodeBlock } from '@/components/CodeBlock'
+import { getImageSize } from '@/lib/image-size'
 
 function MarkdownImage(props: React.ImgHTMLAttributes<HTMLImageElement>) {
   const { src, alt, ...rest } = props
   if (typeof src !== 'string') return <img alt={alt ?? ''} {...rest} />
+  const size = getImageSize(src)
   return (
     <a href={src} target="_blank" rel="noopener noreferrer" title="원본 크기로 보기">
-      <img src={src} alt={alt ?? ''} loading="lazy" decoding="async" {...rest} />
+      <img
+        src={src}
+        alt={alt ?? ''}
+        width={size?.width}
+        height={size?.height}
+        loading="lazy"
+        decoding="async"
+        {...rest}
+      />
     </a>
   )
 }
@@ -34,13 +44,15 @@ export default function Page() {
 
   return (
     <Suspense fallback={<div className="min-h-screen" />}>
-      <PageClient sections={sections} tiers={config.tiers}>
+      <PageClient sections={sections} tiers={config.tiers} groups={config.groups}>
         {sectionContents.map(({ meta, markdown, frontmatter }) => (
           <SectionBlock
             key={meta.id}
             id={meta.id}
             order={meta.order}
             tier={meta.tier}
+            track={meta.track}
+            trackLabel={config.tracks[meta.track]?.label ?? ''}
             title={meta.title}
             subtitle={meta.subtitle}
             part={meta.part}

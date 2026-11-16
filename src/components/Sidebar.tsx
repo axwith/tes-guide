@@ -1,20 +1,25 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import type { SectionMeta, SectionTier, TierMeta } from '@/types'
+import type { GroupMeta, SectionGroup, SectionMeta, SectionTier, TierMeta } from '@/types'
+import { isTrackVisible } from '@/types'
 import { trackTocClick } from '@/lib/analytics'
 import { SearchBar } from './SearchBar'
+import { TrackSelector } from './TrackSelector'
+import { useTrack } from './TrackContext'
 
 interface SidebarProps {
   sections: SectionMeta[]
   tiers: Record<SectionTier, TierMeta>
+  groups: Record<SectionGroup, GroupMeta>
   onLinkClick?: () => void
   isMobile?: boolean
 }
 
-export function Sidebar({ sections, tiers, onLinkClick, isMobile = false }: SidebarProps) {
+export function Sidebar({ sections, tiers, groups, onLinkClick, isMobile = false }: SidebarProps) {
+  const { track } = useTrack()
   const [activeId, setActiveId] = useState<string>('')
-  const [collapsedTiers, setCollapsedTiers] = useState<Record<string, boolean>>({})
+  const [collapsedGroups, setCollapsedGroups] = useState<Record<string, boolean>>({})
   const [matchedIds, setMatchedIds] = useState<string[] | null>(null)
   const navRef = useRef<HTMLElement>(null)
 
@@ -57,59 +62,86 @@ export function Sidebar({ sections, tiers, onLinkClick, isMobile = false }: Side
     return () => observer.disconnect()
   }, [sections])
 
-  // Group sections by tier, ordered by tier order
-  const tierKeys = Object.keys(tiers).sort(
-    (a, b) => tiers[a as SectionTier].order - tiers[b as SectionTier].order
-  ) as SectionTier[]
+  const trackSections = sections.filter((s) => isTrackVisible(s.track, track))
   const visibleSections =
-    matchedIds === null ? sections : sections.filter((s) => matchedIds.includes(s.id))
+    matchedIds === null ? trackSections : trackSections.filter((s) => matchedIds.includes(s.id))
 
-  const grouped = tierKeys.map((key) => ({
-    key,
-    meta: tiers[key],
-    sections: visibleSections.filter((s) => s.tier === key),
-  }))
+  const groupKeys = (Object.keys(groups) as SectionGroup[]).sort(
+    (a, b) => groups[a].order - groups[b].order
+  )
+  const tierKeys = Object.keys(tiers).sort((a, b) => tiers[a].order - tiers[b].order)
 
-  // reference 그룹은 기본 collapsible 
+  const grouped = groupKeys.map((groupKey) => {
+    const group = groups[groupKey]
+    const groupTiers = tierKeys
+      .filter((tierKey) => tiers[tierKey].group === groupKey)
+      .map((tierKey) => ({
+        key: tierKey,
+        meta: tiers[tierKey],
+        sections: visibleSections.filter((s) => s.tier === tierKey),
+      }))
+      .filter((t) => t.sections.length > 0)
+    return { key: groupKey, meta: group, tiers: groupTiers }
+  })
+
+  // 참고 묶음은 접을 수 있다
   const isCollapsible = (key: string) => key === 'reference'
 
   return (
     <nav ref={navRef} className="flex flex-col gap-1">
-      <SearchBar onResults={setMatchedIds} />
-      {matchedIds?.length === 0 ? (
+      <div className="mb-3">
+        <p className="mb-1.5 px-1 text-[11px] font-semibold text-zinc-400 dark:text-zinc-500">
+          과정 선택
+        </p>
+        <TrackSelector />
+      </div>
+      <SearchBar onResults={setMatchedIds} track={track} />
+      {matchedIds !== null && visibleSections.length === 0 ? (
         <p className="px-2 py-2 text-sm text-zinc-400 dark:text-zinc-500">검색 결과 없음</p>
       ) : (
-        grouped.map(({ key, meta, sections: tierSections }) => {
-          if (tierSections.length === 0) return null
-          const collapsed = collapsedTiers[key] ?? false
+        grouped.map(({ key, meta, tiers: groupTiers }) => {
+          if (groupTiers.length === 0) return null
+          const collapsed = collapsedGroups[key] ?? false
           const collapsible = isCollapsible(key)
+          // 과정 묶음처럼 작은 묶음이 묶음 이름과 같으면 작은 머리말은 생략한다
+          const showTierLabels = groupTiers.some((t) => t.meta.label !== meta.label)
 
           return (
-            <div key={key} className="mb-2">
+            <div key={key} data-track-item={meta.track} className="mb-3">
               {collapsible ? (
                 <button
-                  onClick={() => setCollapsedTiers((s) => ({ ...s, [key]: !collapsed }))}
-                  className="mb-2 flex w-full items-center justify-between px-2 text-xs font-semibold uppercase tracking-wider text-zinc-400 transition-colors hover:text-zinc-700 dark:text-zinc-500 dark:hover:text-zinc-300"
+                  onClick={() => setCollapsedGroups((s) => ({ ...s, [key]: !collapsed }))}
+                  className="mb-2 flex w-full items-center justify-between px-2 text-xs font-bold tracking-wide text-zinc-500 transition-colors hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
                 >
                   <span>{meta.label}</span>
-                  <span className="text-zinc-300 dark:text-zinc-600">
-                    {collapsed ? '▸' : '▾'}
-                  </span>
+                  <span className="text-zinc-400 dark:text-zinc-500">{collapsed ? '▸' : '▾'}</span>
                 </button>
               ) : (
-                <p className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+                <p className="mb-2 flex items-center gap-2 px-2 text-xs font-bold tracking-wide text-zinc-500 dark:text-zinc-400">
+                  {meta.track !== 'common' && (
+                    <span className="h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden="true" />
+                  )}
                   {meta.label}
                 </p>
               )}
               {!collapsed &&
-                tierSections.map((section) => (
-                  <SidebarItem
-                    key={section.id}
-                    section={section}
-                    isActive={activeId === section.id}
-                    onLinkClick={onLinkClick}
-                    isMobile={isMobile}
-                  />
+                groupTiers.map(({ key: tierKey, meta: tierMeta, sections: tierSections }) => (
+                  <div key={tierKey} className="mb-1.5">
+                    {showTierLabels && (
+                      <p className="mb-1 px-2 text-[11px] text-zinc-400 dark:text-zinc-500">
+                        {tierMeta.label}
+                      </p>
+                    )}
+                    {tierSections.map((section) => (
+                      <SidebarItem
+                        key={section.id}
+                        section={section}
+                        isActive={activeId === section.id}
+                        onLinkClick={onLinkClick}
+                        isMobile={isMobile}
+                      />
+                    ))}
+                  </div>
                 ))}
             </div>
           )
@@ -117,6 +149,14 @@ export function Sidebar({ sections, tiers, onLinkClick, isMobile = false }: Side
       )}
     </nav>
   )
+}
+
+/** 사이드바 번호: 공통 준비는 'P-CL'(예: 1-01), 과정 안내는 '안내', 교시는 'N교시', 참고는 '참고' */
+export function sidebarNumLabel(section: SectionMeta): string {
+  if (section.type === 'reference' || section.part == null || section.clip == null) return '참고'
+  if (section.track === 'common') return `${section.part}-${String(section.clip).padStart(2, '0')}`
+  if (section.part === 0) return '안내'
+  return section.clip > 1 ? `${section.part}교시·${section.clip}` : `${section.part}교시`
 }
 
 function SidebarItem({
@@ -135,28 +175,23 @@ function SidebarItem({
     onLinkClick?.()
   }
 
-  // 클립이면 'P-CL' 형태 (예: '1-01'), 레퍼런스면 글로벌 order 표기
-  const numLabel =
-    section.part != null && section.clip != null
-      ? `${section.part}-${String(section.clip).padStart(2, '0')}`
-      : '참고'
-
   return (
     <a
       href={`#${section.id}`}
       onClick={handleClick}
+      data-track-item={section.track}
       className={`flex items-center gap-2 rounded-md px-2 py-1.5 text-sm transition-colors ${
         isActive
-          ? 'bg-brand-500/10 text-brand-500 dark:text-brand-400'
-          : 'text-zinc-500 hover:bg-zinc-100 hover:text-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-800/50 dark:hover:text-zinc-200'
+          ? 'bg-brand-500/10 text-brand-600 dark:text-brand-400'
+          : 'text-zinc-500 hover:bg-zinc-100 hover:text-zinc-800 dark:text-zinc-400 dark:hover:bg-ide-hover dark:hover:text-zinc-200'
       }`}
     >
-      <span className="w-10 text-center font-mono text-[10px] text-zinc-300 dark:text-zinc-600">
-        {numLabel}
+      <span className="w-10 shrink-0 text-center font-mono text-[10px] text-zinc-400 dark:text-zinc-500">
+        {sidebarNumLabel(section)}
       </span>
       <span className="truncate">{section.title}</span>
       {section.badge && (
-        <span className="ml-auto shrink-0 rounded bg-brand-500/20 px-1 py-0.5 text-[10px] text-brand-500 dark:text-brand-400">
+        <span className="ml-auto shrink-0 rounded bg-brand-500/20 px-1 py-0.5 text-[10px] text-brand-600 dark:text-brand-400">
           {section.badge}
         </span>
       )}

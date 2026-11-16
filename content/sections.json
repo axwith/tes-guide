@@ -10,13 +10,14 @@
   "sections": [
     {
       "id": "part-0-01-overview",
-      "tier": "part-0",
+      "track": "common",
+      "tier": "start",
       "part": 0,
       "clip": 1,
       "order": 1,
       "slug": "overview",
       "title": "교육 안내",
-      "subtitle": "일정, 과정별로 하는 일, 준비물, 11월 20일까지 준비할 것",
+      "subtitle": "일정, 두 과정, 준비물, 11월 20일까지 준비할 것",
       "duration_min": 5,
       "icon": "book-open",
       "badge": null,
@@ -25,7 +26,8 @@
     },
     {
       "id": "part-1-01-windows",
-      "tier": "part-1",
+      "track": "common",
+      "tier": "setup",
       "part": 1,
       "clip": 1,
       "order": 2,
@@ -40,7 +42,8 @@
     },
     {
       "id": "part-1-02-first-request",
-      "tier": "part-1",
+      "track": "common",
+      "tier": "setup",
       "part": 1,
       "clip": 2,
       "order": 3,
@@ -55,13 +58,14 @@
     },
     {
       "id": "part-1-03-mac",
-      "tier": "part-1",
+      "track": "common",
+      "tier": "setup",
       "part": 1,
       "clip": 3,
       "order": 4,
       "slug": "mac",
       "title": "Mac 설치",
-      "subtitle": "macOS 14 이상 Apple Silicon에서 설치하고 같은 흐름으로 첫 요청까지",
+      "subtitle": "macOS 14 이상 · 설치부터 첫 요청까지",
       "duration_min": 15,
       "icon": "settings",
       "badge": null,
@@ -70,7 +74,8 @@
     },
     {
       "id": "part-2-01-checklist",
-      "tier": "part-2",
+      "track": "common",
+      "tier": "check",
       "part": 2,
       "clip": 1,
       "order": 5,
@@ -84,11 +89,44 @@
       "type": "lecture"
     },
     {
+      "id": "lab-0-01-overview",
+      "track": "lab",
+      "tier": "lab",
+      "part": 0,
+      "clip": 1,
+      "order": 100,
+      "slug": "lab-overview",
+      "title": "연구소 과정 안내",
+      "subtitle": "1·2회차 같은 내용 · 두께 데이터 분석과 내 연구 업무 워크스페이스 만들기",
+      "duration_min": 5,
+      "icon": "flask-conical",
+      "badge": null,
+      "file": "parts/lab-0-01-overview.md",
+      "type": "lecture"
+    },
+    {
+      "id": "mixed-0-01-overview",
+      "track": "mixed",
+      "tier": "mixed",
+      "part": 0,
+      "clip": 1,
+      "order": 200,
+      "slug": "mixed-overview",
+      "title": "혼합직무 과정 안내",
+      "subtitle": "3회차 · 데이터 분석과 대시보드, 업무용 워크스페이스 만들기",
+      "duration_min": 5,
+      "icon": "layout-dashboard",
+      "badge": null,
+      "file": "parts/mixed-0-01-overview.md",
+      "type": "lecture"
+    },
+    {
       "id": "ref-troubleshooting",
+      "track": "common",
       "tier": "reference",
       "part": null,
       "clip": null,
-      "order": 6,
+      "order": 900,
       "slug": "troubleshooting",
       "title": "막혔을 때",
       "subtitle": "설치·로그인·Classic 앱·Work 화면·폴더 신뢰·네트워크",
@@ -100,28 +138,76 @@
     }
   ],
   "tiers": {
-    "part-0": {
+    "start": {
       "label": "시작하기",
       "description": "교육 일정과 준비할 것을 확인합니다",
-      "count": 1,
+      "group": "common",
       "order": 0
     },
-    "part-1": {
+    "setup": {
       "label": "앱 설치와 첫 요청",
       "description": "ChatGPT 데스크톱 앱을 설치하고 작업 폴더에서 첫 요청을 보냅니다",
-      "count": 3,
+      "group": "common",
       "order": 1
     },
-    "part-2": {
+    "check": {
       "label": "교육 전 점검",
       "description": "교육 당일 바로 시작할 수 있는지 확인합니다",
-      "count": 1,
+      "group": "common",
       "order": 2
+    },
+    "lab": {
+      "label": "연구소 과정",
+      "description": "연구소 과정의 교시별 안내",
+      "group": "lab",
+      "order": 10
+    },
+    "mixed": {
+      "label": "혼합직무 과정",
+      "description": "혼합직무 과정의 교시별 안내",
+      "group": "mixed",
+      "order": 20
     },
     "reference": {
       "label": "참고",
       "description": "막혔을 때 펼쳐 보는 자료",
-      "count": 1,
+      "group": "reference",
+      "order": 99
+    }
+  },
+  "tracks": {
+    "common": {
+      "label": "공통",
+      "description": "모든 참가자가 함께 보는 준비 안내"
+    },
+    "lab": {
+      "label": "연구소 과정",
+      "description": "1·2회차 · 같은 내용"
+    },
+    "mixed": {
+      "label": "혼합직무 과정",
+      "description": "3회차"
+    }
+  },
+  "groups": {
+    "common": {
+      "label": "공통 준비",
+      "track": "common",
+      "order": 0
+    },
+    "lab": {
+      "label": "연구소 과정",
+      "track": "lab",
+      "order": 1
+    },
+    "mixed": {
+      "label": "혼합직무 과정",
+      "track": "mixed",
+      "order": 2
+    },
+    "reference": {
+      "label": "참고",
+      "track": "common",
       "order": 99
     }
   }

@@ -58,3 +58,7 @@ export function trackSearchQuery(params: {
 }) {
   send('search_query', params)
 }
+
+export function trackTrackSelect(params: { track: string }) {
+  send('track_select', params)
+}

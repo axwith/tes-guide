@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import Script from 'next/script'
+import fs from 'fs'
+import path from 'path'
 import './globals.css'
 
 const geistSans = Geist({
@@ -35,6 +36,12 @@ export const metadata: Metadata = {
   },
 }
 
+// 테마·과정 보기를 첫 페인트 전에 붙이려고 <head>에 인라인 동기 스크립트로 넣는다.
+// next/script beforeInteractive는 정적 export에서 런타임이 나중에 불러와 느린 망에서 깜빡였다.
+const initScript = ['theme-init.js', 'track-init.js']
+  .map((file) => fs.readFileSync(path.join(process.cwd(), 'public', file), 'utf-8'))
+  .join('\n')
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>
-        <Script src="/theme-init.js" strategy="beforeInteractive" />
+        <script dangerouslySetInnerHTML={{ __html: initScript }} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}

@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { ThemeToggle } from './ThemeToggle'
+import Link from 'next/link'
 
 interface NavProps {
   mobileMenuOpen: boolean
@@ -10,14 +10,14 @@ interface NavProps {
 
 export function Nav({ mobileMenuOpen, onMobileMenuToggle }: NavProps) {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/90">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur-md dark:border-ide-line dark:bg-ide-bg/90">
       <div className="mx-auto flex h-14 max-w-screen-xl items-center justify-between px-4 lg:px-6">
         {/* Logo */}
         <Link
           href="/"
           className="flex items-center gap-2 font-mono text-lg font-bold text-zinc-900 dark:text-white"
         >
-          <span className="text-brand-500 dark:text-brand-400">▸</span>
+          <span className="text-brand-600 dark:text-brand-400">▸</span>
           <span>TES Codex 실습</span>
           <span className="hidden text-xs font-normal text-zinc-400 sm:inline">
             테스 · 11월 24~26일
@@ -31,7 +31,7 @@ export function Nav({ mobileMenuOpen, onMobileMenuToggle }: NavProps) {
           {/* Hamburger — mobile only */}
           <button
             onClick={onMobileMenuToggle}
-            className="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-zinc-100 text-zinc-600 transition-colors hover:border-zinc-400 hover:text-zinc-900 lg:hidden dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-500 dark:hover:text-white"
+            className="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-zinc-100 text-zinc-600 transition-colors hover:border-zinc-400 hover:text-zinc-900 lg:hidden dark:border-ide-line dark:bg-ide-hover dark:text-zinc-300 dark:hover:border-zinc-500 dark:hover:text-white"
             aria-label={mobileMenuOpen ? '메뉴 닫기' : '메뉴 열기'}
           >
             {mobileMenuOpen ? (

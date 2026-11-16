@@ -1,29 +1,33 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
+
+// 기본은 라이트. theme-init.js가 첫 페인트 전에 html.dark를 정하고, 이 버튼은 그 값을 따라 그린다.
+function subscribe(onChange: () => void) {
+  const observer = new MutationObserver(onChange)
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+  return () => observer.disconnect()
+}
+const getSnapshot = () => document.documentElement.classList.contains('dark')
+const getServerSnapshot = () => false
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState(true)
-
-  useEffect(() => {
-    const saved = localStorage.getItem('theme')
-    const dark = saved ? saved === 'dark' : true
-    setIsDark(dark)
-  }, [])
+  const isDark = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
 
   const toggle = () => {
     const next = !isDark
-    setIsDark(next)
-    localStorage.setItem('theme', next ? 'dark' : 'light')
+    try {
+      localStorage.setItem('theme', next ? 'dark' : 'light')
+    } catch (_) {}
     document.documentElement.classList.toggle('dark', next)
   }
 
   return (
     <button
       onClick={toggle}
-      className="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-zinc-100 text-zinc-600 transition-colors hover:border-zinc-400 hover:text-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-500 dark:hover:text-white"
-      aria-label="Toggle theme"
-      title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      className="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-200 bg-white text-zinc-500 transition-colors hover:border-brand-300 hover:text-brand-600 dark:border-ide-line dark:bg-ide-hover dark:text-zinc-300 dark:hover:border-zinc-500 dark:hover:text-white"
+      aria-label={isDark ? '라이트 모드로 바꾸기' : '다크 모드로 바꾸기'}
+      title={isDark ? '라이트 모드로 바꾸기' : '다크 모드로 바꾸기'}
     >
       {isDark ? (
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

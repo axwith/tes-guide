@@ -17,9 +17,9 @@ export default function OpengraphImage() {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'center',
-          background: '#09090b',
+          background: '#1e1e1e',
           backgroundImage:
-            'radial-gradient(ellipse at 25% 0%, rgba(255, 0, 60, 0.55) 0%, rgba(9, 9, 11, 0) 55%), radial-gradient(ellipse at 90% 100%, rgba(255, 58, 102, 0.35) 0%, rgba(9, 9, 11, 0) 55%)',
+            'radial-gradient(ellipse at 25% 0%, rgba(37, 99, 235, 0.55) 0%, rgba(30, 30, 30, 0) 55%), radial-gradient(ellipse at 90% 100%, rgba(96, 165, 250, 0.35) 0%, rgba(30, 30, 30, 0) 55%)',
           color: '#ffffff',
           fontFamily: 'sans-serif',
           padding: 96,
@@ -31,7 +31,7 @@ export default function OpengraphImage() {
             display: 'flex',
             alignItems: 'center',
             gap: 18,
-            color: '#fc1c49',
+            color: '#60a5fa',
             fontSize: 32,
             fontWeight: 700,
             marginBottom: 36,
@@ -43,7 +43,7 @@ export default function OpengraphImage() {
               height: 0,
               borderTop: '12px solid transparent',
               borderBottom: '12px solid transparent',
-              borderLeft: '20px solid #fc1c49',
+              borderLeft: '20px solid #60a5fa',
             }}
           />
           <span>TES Codex 실습</span>
@@ -63,7 +63,7 @@ export default function OpengraphImage() {
           }}
         >
           <div style={{ display: 'flex' }}>
-            <span style={{ color: '#fc1c49' }}>Codex</span>
+            <span style={{ color: '#60a5fa' }}>Codex</span>
             <span>&nbsp;실습 교육</span>
           </div>
           <div>사전 준비 안내</div>
@@ -95,11 +95,11 @@ export default function OpengraphImage() {
           }}
         >
           <div style={{ display: 'flex', gap: 8 }}>
-            <span style={{ color: '#fc1c49' }}>3</span>
+            <span style={{ color: '#60a5fa' }}>3</span>
             <span>준비 단계</span>
           </div>
           <div style={{ display: 'flex', gap: 8 }}>
-            <span style={{ color: '#fc1c49' }}>Windows</span>
+            <span style={{ color: '#60a5fa' }}>Windows</span>
             <span>기준</span>
           </div>
         </div>

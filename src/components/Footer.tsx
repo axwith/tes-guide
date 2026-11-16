@@ -4,12 +4,12 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-zinc-200 bg-white py-12 dark:border-zinc-800 dark:bg-zinc-950">
+    <footer className="border-t border-zinc-200 bg-white py-12 dark:border-ide-line dark:bg-ide-bg">
       <div className="mx-auto max-w-screen-xl px-4 lg:px-6">
         <div className="flex flex-col items-center gap-6 text-center">
           {/* Logo */}
           <div className="font-mono text-xl font-bold text-zinc-900 dark:text-white">
-            <span className="text-brand-500 dark:text-brand-400">▸</span> TES Codex 실습 안내
+            <span className="text-brand-600 dark:text-brand-400">▸</span> TES Codex 실습 안내
           </div>
 
           {/* Description */}
@@ -39,7 +39,7 @@ export function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-xs text-zinc-300 dark:text-zinc-700">
+          <p className="text-xs text-zinc-300 dark:text-zinc-500">
             © {year} AXWITH · 테스 Codex 실습 교육
           </p>
         </div>
