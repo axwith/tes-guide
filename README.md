@@ -44,7 +44,7 @@ pnpm build   # 검색 색인(public/search-index.json) 생성 후 out/ 정적 ex
   "clip": 1,
   "order": 110,
   "slug": "lab-thickness",
-  "title": "1교시 두께 데이터 정리",
+  "title": "1교시 실습",
   "subtitle": "한 줄 설명",
   "duration_min": null,
   "icon": "flask-conical",
@@ -67,3 +67,10 @@ pnpm build   # 검색 색인(public/search-index.json) 생성 후 out/ 정적 ex
 
 - 교육 내용 사실은 교육 담당 정본 문서에서만 가져옵니다. 정본에 없는 절차·날짜를 적지 않습니다.
 - 공개 사이트입니다. 개인정보와 금액을 넣지 않습니다.
+
+## 과정 선택 다시 켜기
+
+과정별 안내가 준비되기 전이라 과정 선택(전체·연구소 과정·혼합직무 과정)은 숨겨 두었습니다. 기능 코드(`TrackSelector`·`TrackBand`·`track-init.js`)는 그대로 있습니다.
+
+1. `track`이 `lab`·`mixed`인 섹션을 `sections.json`에 넣습니다.
+2. `src/components/PageClient.tsx`의 `<TrackBand />`와 `src/components/Sidebar.tsx`의 `<TrackSelector />`를 다시 넣습니다.

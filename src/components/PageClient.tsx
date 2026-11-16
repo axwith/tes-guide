@@ -7,7 +7,6 @@ import { Footer } from './Footer'
 import { Hero } from './Hero'
 import { ToastProvider } from './Toast'
 import { TrackProvider } from './TrackContext'
-import { TrackBand } from './TrackBand'
 import type { GroupMeta, SectionGroup, SectionMeta, SectionTier, TierMeta } from '@/types'
 
 interface PageClientProps {
@@ -75,7 +74,7 @@ export function PageClient({ sections, tiers, groups, children }: PageClientProp
       )}
 
       <Hero />
-      <TrackBand />
+      {/* 과정별 안내 공개 전까지 과정 선택 숨김: <TrackBand /> */}
 
       <div className="mx-auto flex max-w-screen-xl">
         {/* Sidebar */}

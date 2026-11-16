@@ -5,7 +5,6 @@ import type { GroupMeta, SectionGroup, SectionMeta, SectionTier, TierMeta } from
 import { isTrackVisible } from '@/types'
 import { trackTocClick } from '@/lib/analytics'
 import { SearchBar } from './SearchBar'
-import { TrackSelector } from './TrackSelector'
 import { useTrack } from './TrackContext'
 
 interface SidebarProps {
@@ -89,12 +88,7 @@ export function Sidebar({ sections, tiers, groups, onLinkClick, isMobile = false
 
   return (
     <nav ref={navRef} className="flex flex-col gap-1">
-      <div className="mb-3">
-        <p className="mb-1.5 px-1 text-[11px] font-semibold text-zinc-400 dark:text-zinc-500">
-          과정 선택
-        </p>
-        <TrackSelector />
-      </div>
+      {/* 과정별 안내 공개 전까지 과정 선택 숨김(TrackSelector) */}
       <SearchBar onResults={setMatchedIds} track={track} />
       {matchedIds !== null && visibleSections.length === 0 ? (
         <p className="px-2 py-2 text-sm text-zinc-400 dark:text-zinc-500">검색 결과 없음</p>
