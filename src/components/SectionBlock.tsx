@@ -114,7 +114,7 @@ export function SectionBlock({
           prose-headings:font-bold
           prose-h3:text-xl prose-h4:text-lg prose-h5:text-base
           prose-p:leading-relaxed
-          prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline dark:prose-a:text-brand-400
+          prose-a:text-brand-600 prose-a:no-underline prose-a:hover:underline dark:prose-a:text-brand-400
           prose-code:rounded prose-code:bg-zinc-100 prose-code:px-1.5 prose-code:py-0.5
           prose-code:text-brand-600 prose-code:text-sm
           prose-code:before:content-none prose-code:after:content-none

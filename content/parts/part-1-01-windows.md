@@ -1,7 +1,7 @@
 ---
 course_clip_ref: "Windows 설치"
 result_path: ""
-next_clip_id: "part-1-02-first-request"
+next_clip_id: "part-1-03-first-request"
 ---
 
 # Windows 앱 설치
@@ -117,10 +117,8 @@ chatgpt.com/ko-KR/download
 
 ![ChatGPT 앱 첫 화면, 가운데에 어떤 작업을 할까요 문구](/images/win/08.jpg)
 
-사진의 왼쪽 목록과 프로필은 개인정보라 흐리게 처리했습니다.
-
 ---
 
 ## 다음
 
-[작업 폴더 연결과 첫 요청 →](#part-1-02-first-request)
+[작업 폴더 연결과 첫 요청 →](#part-1-03-first-request)
