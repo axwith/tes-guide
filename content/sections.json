@@ -1,0 +1,128 @@
+{
+  "site": {
+    "name": "TES Codex 실습 안내",
+    "url": "tes.axwith.com",
+    "description": "테스 Codex 실습 교육 사전 준비 안내",
+    "course_version": "2026-11-24",
+    "version": "1.0.0",
+    "lastUpdated": "2026-11-16"
+  },
+  "sections": [
+    {
+      "id": "part-0-01-overview",
+      "tier": "part-0",
+      "part": 0,
+      "clip": 1,
+      "order": 1,
+      "slug": "overview",
+      "title": "교육 안내",
+      "subtitle": "일정, 과정별로 하는 일, 준비물, 11월 20일까지 준비할 것",
+      "duration_min": 5,
+      "icon": "book-open",
+      "badge": null,
+      "file": "parts/part-0-01-overview.md",
+      "type": "lecture"
+    },
+    {
+      "id": "part-1-01-windows",
+      "tier": "part-1",
+      "part": 1,
+      "clip": 1,
+      "order": 2,
+      "slug": "windows",
+      "title": "Windows 앱 설치",
+      "subtitle": "공식 다운로드 페이지에서 받아 설치하고 회사 계정으로 로그인(1~9단계)",
+      "duration_min": 15,
+      "icon": "settings",
+      "badge": null,
+      "file": "parts/part-1-01-windows.md",
+      "type": "lecture"
+    },
+    {
+      "id": "part-1-02-first-request",
+      "tier": "part-1",
+      "part": 1,
+      "clip": 2,
+      "order": 3,
+      "slug": "first-request",
+      "title": "작업 폴더 연결과 첫 요청",
+      "subtitle": "codex-교육 폴더를 프로젝트로 연결하고 hello.txt 만들기(10~19단계)",
+      "duration_min": 10,
+      "icon": "folder-tree",
+      "badge": null,
+      "file": "parts/part-1-02-first-request.md",
+      "type": "lecture"
+    },
+    {
+      "id": "part-1-03-mac",
+      "tier": "part-1",
+      "part": 1,
+      "clip": 3,
+      "order": 4,
+      "slug": "mac",
+      "title": "Mac 설치",
+      "subtitle": "macOS 14 이상 Apple Silicon에서 설치하고 같은 흐름으로 첫 요청까지",
+      "duration_min": 15,
+      "icon": "settings",
+      "badge": null,
+      "file": "parts/part-1-03-mac.md",
+      "type": "lecture"
+    },
+    {
+      "id": "part-2-01-checklist",
+      "tier": "part-2",
+      "part": 2,
+      "clip": 1,
+      "order": 5,
+      "slug": "checklist",
+      "title": "교육 전 점검표",
+      "subtitle": "11월 20일(금)까지 네 가지를 확인합니다",
+      "duration_min": 5,
+      "icon": "user-check",
+      "badge": null,
+      "file": "parts/part-2-01-checklist.md",
+      "type": "lecture"
+    },
+    {
+      "id": "ref-troubleshooting",
+      "tier": "reference",
+      "part": null,
+      "clip": null,
+      "order": 6,
+      "slug": "troubleshooting",
+      "title": "막혔을 때",
+      "subtitle": "설치·로그인·Classic 앱·Work 화면·폴더 신뢰·네트워크",
+      "duration_min": null,
+      "icon": "help-circle",
+      "badge": null,
+      "file": "reference/troubleshooting.md",
+      "type": "reference"
+    }
+  ],
+  "tiers": {
+    "part-0": {
+      "label": "시작하기",
+      "description": "교육 일정과 준비할 것을 확인합니다",
+      "count": 1,
+      "order": 0
+    },
+    "part-1": {
+      "label": "앱 설치와 첫 요청",
+      "description": "ChatGPT 데스크톱 앱을 설치하고 작업 폴더에서 첫 요청을 보냅니다",
+      "count": 3,
+      "order": 1
+    },
+    "part-2": {
+      "label": "교육 전 점검",
+      "description": "교육 당일 바로 시작할 수 있는지 확인합니다",
+      "count": 1,
+      "order": 2
+    },
+    "reference": {
+      "label": "참고",
+      "description": "막혔을 때 펼쳐 보는 자료",
+      "count": 1,
+      "order": 99
+    }
+  }
+}
