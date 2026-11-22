@@ -26,7 +26,7 @@ irm https://raw.githubusercontent.com/axwith/tes-workmate/main/get.ps1 | iex
 curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh | bash
 ```
 
-설치가 끝나면 폴더가 열립니다(Windows `문서\tes-workmate`, Mac `~/Documents/tes-workmate`). 창은 그대로 두고 1교시를 이어 갑니다.
+설치기가 이 PC의 최근 업무 파일 목록과 본문을 미리 읽어 내 업무 공간에 넣어 둡니다(사전 스캔). 끝나면 `설치 완료`가 보이고 폴더가 열립니다(Windows `문서\tes-workmate`, Mac `~/Documents/tes-workmate`). 창은 그대로 두고 1교시를 이어 갑니다. 온보딩은 3교시에 Codex에서 합니다.
 
 ---
 
