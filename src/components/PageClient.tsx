@@ -7,16 +7,20 @@ import { Footer } from './Footer'
 import { Hero } from './Hero'
 import { ToastProvider } from './Toast'
 import { TrackProvider } from './TrackContext'
-import type { GroupMeta, SectionGroup, SectionMeta, SectionTier, TierMeta } from '@/types'
+import type { GroupMeta, SectionGroup, SectionMeta, SectionTier, TierMeta, TrackFilter } from '@/types'
 
 interface PageClientProps {
   sections: SectionMeta[]
   tiers: Record<SectionTier, TierMeta>
   groups: Record<SectionGroup, GroupMeta>
   children: React.ReactNode
+  /** 머리 영역. 없으면 메인 Hero */
+  hero?: React.ReactNode
+  /** 과정 페이지(/rnd/, /biz/)처럼 과정이 정해진 페이지 */
+  fixedTrack?: TrackFilter
 }
 
-export function PageClient({ sections, tiers, groups, children }: PageClientProps) {
+export function PageClient({ sections, tiers, groups, children, hero, fixedTrack }: PageClientProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Lock body scroll when mobile menu is open
@@ -38,7 +42,7 @@ export function PageClient({ sections, tiers, groups, children }: PageClientProp
   const watermarkUrl = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Ctext transform='rotate(-45 160 160)' x='160' y='160' text-anchor='middle' dominant-baseline='middle' fill='rgba(120%2C120%2C120%2C0.22)' font-size='15' font-family='system-ui%2Csans-serif' letter-spacing='2'%3ETES%3C/text%3E%3C/svg%3E")`
 
   return (
-    <TrackProvider>
+    <TrackProvider fixedTrack={fixedTrack}>
     <ToastProvider>
       {/* Watermark overlay */}
       <div
@@ -73,7 +77,7 @@ export function PageClient({ sections, tiers, groups, children }: PageClientProp
         </div>
       )}
 
-      <Hero />
+      {hero ?? <Hero />}
       {/* 과정별 안내 공개 전까지 과정 선택 숨김: <TrackBand /> */}
 
       <div className="mx-auto flex max-w-screen-xl">

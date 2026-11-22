@@ -68,6 +68,17 @@ pnpm build   # 검색 색인(public/search-index.json) 생성 후 out/ 정적 ex
 - 교육 내용 사실은 교육 담당 정본 문서에서만 가져옵니다. 정본에 없는 절차·날짜를 적지 않습니다.
 - 공개 사이트입니다. 개인정보와 금액을 넣지 않습니다.
 
+## 과정 페이지
+
+메인(`/`)은 `track: common` 섹션만 보여 줍니다. 과정별 당일 안내는 주소가 따로 있습니다.
+
+| 주소 | 파일 | 보이는 섹션 |
+|---|---|---|
+| `/rnd/` | `src/app/rnd/page.tsx` | `track: lab` (연구소 과정, 1·2회차) |
+| `/biz/` | `src/app/biz/page.tsx` | `track: mixed` (혼합직무 과정, 3회차) |
+
+두 페이지는 `GuidePage`(섹션 렌더)와 `CourseHero`(머리 영역)를 같이 씁니다. `public/track-init.js`가 주소를 보고 과정을 고정하므로 저장된 과정 선택과 상관없이 그 과정만 보입니다. 실습 폴더는 `public/downloads/tes-lab.zip`입니다(정답표·강사용 폴더를 뺀 배포본).
+
 ## 과정 선택 다시 켜기
 
 과정별 안내가 준비되기 전이라 과정 선택(전체·연구소 과정·혼합직무 과정)은 숨겨 두었습니다. 기능 코드(`TrackSelector`·`TrackBand`·`track-init.js`)는 그대로 있습니다.

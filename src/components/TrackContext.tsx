@@ -44,14 +44,22 @@ function applyTrack(next: TrackFilter, persist = true) {
   window.dispatchEvent(new Event(CHANGE_EVENT))
 }
 
-export function TrackProvider({ children }: { children: React.ReactNode }) {
+export function TrackProvider({
+  children,
+  fixedTrack,
+}: {
+  children: React.ReactNode
+  /** 과정 페이지처럼 과정이 정해져 있으면 주소·저장값을 건드리지 않는다 */
+  fixedTrack?: TrackFilter
+}) {
   // 정적 export라 서버 렌더 값은 '전체'다. 클라이언트에서는 html[data-track]을 읽는다.
   const track = useSyncExternalStore(subscribe, readTrack, () => 'all' as TrackFilter)
 
   // localStorage에서 복원한 과정도 주소에 남겨 그대로 공유할 수 있게 한다
   useEffect(() => {
+    if (fixedTrack) return
     syncUrl(readTrack())
-  }, [])
+  }, [fixedTrack])
 
   const setTrack = useCallback((next: TrackFilter) => {
     applyTrack(next)
@@ -61,6 +69,7 @@ export function TrackProvider({ children }: { children: React.ReactNode }) {
   // 다른 과정 섹션으로 가는 링크(#mixed-… 등)를 누르면 그 섹션이 숨겨져 있으므로 '전체'로 풀어 보여 준다.
   // 이때는 잠시 펼친 보기라 저장하지 않는다. 다음 방문에는 사용자가 고른 과정이 그대로 남는다.
   useEffect(() => {
+    if (fixedTrack) return
     const revealIfHidden = (id: string) => {
       if (!id) return null
       const el = document.getElementById(id)
@@ -90,7 +99,7 @@ export function TrackProvider({ children }: { children: React.ReactNode }) {
       document.removeEventListener('click', onClick, true)
       window.removeEventListener('hashchange', onHash)
     }
-  }, [])
+  }, [fixedTrack])
 
   const value = useMemo(() => ({ track, setTrack }), [track, setTrack])
   return <TrackContext.Provider value={value}>{children}</TrackContext.Provider>

@@ -9,6 +9,23 @@ const steps = [
   { num: '3', title: '폴더 연결', desc: 'codex-교육 폴더를 만들어 작업 폴더로 연결합니다' },
 ]
 
+const courses = [
+  {
+    href: '/rnd/',
+    ctaId: 'course_rnd',
+    label: '연구소 과정',
+    when: '1회차 11월 24일(화) · 2회차 11월 25일(수)',
+    desc: '1~3교시 순서, 실습 폴더 받기, 장비 런 데이터 실습',
+  },
+  {
+    href: '/biz/',
+    ctaId: 'course_biz',
+    label: '혼합직무 과정',
+    when: '3회차 11월 26일(목)',
+    desc: '1~3교시 순서, 실습 폴더 받기, 운영·재무 자료 실습',
+  },
+]
+
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
   const [mousePos, setMousePos] = useState({ x: 50, y: 30 })
@@ -101,6 +118,24 @@ export function Hero() {
         <p className="mb-10 text-lg text-zinc-500 sm:text-xl dark:text-zinc-400">
           테스 · 2026년 11월 24~26일 · 교육 전에 아래 세{'\u00a0'}가지를 준비해 주세요
         </p>
+
+        {/* 과정별 당일 안내 */}
+        <div className="mx-auto mb-10 grid max-w-3xl gap-3 text-left sm:grid-cols-2">
+          {courses.map((c) => (
+            <a
+              key={c.href}
+              href={c.href}
+              onClick={() => trackCtaClick({ cta_id: c.ctaId, destination: c.href })}
+              className="group rounded-xl border-2 border-brand-500 bg-brand-500/10 p-5 shadow-sm transition-colors hover:bg-brand-500/20"
+            >
+              <p className="text-xs font-semibold text-brand-600 dark:text-brand-400">{c.when}</p>
+              <p className="mt-1 text-xl font-bold text-zinc-900 dark:text-white">
+                {c.label} 당일 안내 <span className="transition-transform group-hover:translate-x-1">→</span>
+              </p>
+              <p className="mt-1 break-keep text-sm text-zinc-500 dark:text-zinc-400">{c.desc}</p>
+            </a>
+          ))}
+        </div>
 
         {/* Steps */}
         <ol className="mx-auto mb-10 grid max-w-3xl gap-3 text-left sm:grid-cols-3">
