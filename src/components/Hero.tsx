@@ -13,7 +13,7 @@ const courses = [
   {
     href: '/rnd/',
     ctaId: 'course_rnd',
-    label: '연구소 과정',
+    label: '연구소과정 센터',
     when: '1회차 11월 24일(화) · 2회차 11월 25일(수)',
     desc: '1~3교시 순서, 실습 폴더 받기, 장비 런 데이터 실습',
   },
@@ -112,24 +112,6 @@ export function Hero() {
           테스 · 2026년 11월 24~26일 · 교육 전에 아래 세{'\u00a0'}가지를 준비해 주세요
         </p>
 
-        {/* 연구소 과정 안내 */}
-        <div className="mx-auto mb-10 grid max-w-3xl gap-3 text-left sm:grid-cols-2">
-          {courses.map((c) => (
-            <a
-              key={c.href}
-              href={c.href}
-              onClick={() => trackCtaClick({ cta_id: c.ctaId, destination: c.href })}
-              className="group rounded-xl border-2 border-brand-500 bg-brand-500/10 p-5 shadow-sm transition-colors hover:bg-brand-500/20"
-            >
-              <p className="text-xs font-semibold text-brand-600 dark:text-brand-400">{c.when}</p>
-              <p className="mt-1 text-xl font-bold text-zinc-900 dark:text-white">
-                {c.label} <span className="transition-transform group-hover:translate-x-1">→</span>
-              </p>
-              <p className="mt-1 break-keep text-sm text-zinc-500 dark:text-zinc-400">{c.desc}</p>
-            </a>
-          ))}
-        </div>
-
         {/* Steps */}
         <ol className="mx-auto mb-10 grid max-w-3xl gap-3 text-left sm:grid-cols-3">
           {steps.map((step) => (
@@ -148,8 +130,26 @@ export function Hero() {
           ))}
         </ol>
 
+        {/* 연구소과정 센터 */}
+        <div className="mx-auto mt-10 max-w-3xl text-left">
+          {courses.map((c) => (
+            <a
+              key={c.href}
+              href={c.href}
+              onClick={() => trackCtaClick({ cta_id: c.ctaId, destination: c.href })}
+              className="group block rounded-xl border-2 border-brand-500 bg-brand-500/10 p-5 shadow-sm transition-colors hover:bg-brand-500/20"
+            >
+              <p className="text-xs font-semibold text-brand-600 dark:text-brand-400">{c.when}</p>
+              <p className="mt-1 text-xl font-bold text-zinc-900 dark:text-white">
+                {c.label} <span className="transition-transform group-hover:translate-x-1">→</span>
+              </p>
+              <p className="mt-1 break-keep text-sm text-zinc-500 dark:text-zinc-400">{c.desc}</p>
+            </a>
+          ))}
+        </div>
+
         {/* CTA */}
-        <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a
             href="#part-1-01-windows"
             onClick={() =>
