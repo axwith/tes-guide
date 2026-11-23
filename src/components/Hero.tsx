@@ -17,13 +17,6 @@ const courses = [
     when: '1회차 11월 24일(화) · 2회차 11월 25일(수)',
     desc: '1~3교시 순서, 실습 폴더 받기, 장비 런 데이터 실습',
   },
-  {
-    href: '/biz/',
-    ctaId: 'course_biz',
-    label: '혼합직무 과정',
-    when: '3회차 11월 26일(목)',
-    desc: '1~3교시 순서, 실습 폴더 받기, 운영·재무 자료 실습',
-  },
 ]
 
 export function Hero() {
@@ -119,10 +112,7 @@ export function Hero() {
           테스 · 2026년 11월 24~26일 · 교육 전에 아래 세{'\u00a0'}가지를 준비해 주세요
         </p>
 
-        {/* 과정별 당일 안내 */}
-        <div className="mx-auto mb-3 max-w-3xl text-left">
-          <h2 className="text-sm font-semibold text-zinc-700 dark:text-zinc-300">과정별 당일 안내</h2>
-        </div>
+        {/* 연구소 과정 안내 */}
         <div className="mx-auto mb-10 grid max-w-3xl gap-3 text-left sm:grid-cols-2">
           {courses.map((c) => (
             <a
@@ -133,7 +123,7 @@ export function Hero() {
             >
               <p className="text-xs font-semibold text-brand-600 dark:text-brand-400">{c.when}</p>
               <p className="mt-1 text-xl font-bold text-zinc-900 dark:text-white">
-                {c.label} 당일 안내 <span className="transition-transform group-hover:translate-x-1">→</span>
+                {c.label} <span className="transition-transform group-hover:translate-x-1">→</span>
               </p>
               <p className="mt-1 break-keep text-sm text-zinc-500 dark:text-zinc-400">{c.desc}</p>
             </a>
