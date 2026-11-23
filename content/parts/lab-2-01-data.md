@@ -93,7 +93,7 @@ Codex가 2교시 전체 보기와 자료 확인 결과(`준비 완료: data 파�
 | `data/doe.csv` | 세팅을 바꿔 가며 돌린 시험 런(DOE) 11건 |
 | `tools/virtual-chamber.html` | 세팅값을 넣으면 두께를 예측하는 가상 장비 계산기 |
 
-결과는 `outputs/`에 쌓입니다. 강사 완성본은 `checkpoints/lab2-research/step4/dashboard.html`을 더블클릭하면 볼 수 있습니다.
+결과는 `outputs/`에 쌓입니다. 강사 완성본은 `checkpoints/2교시/step4/dashboard.html`을 더블클릭하면 볼 수 있습니다.
 
 ---
 
