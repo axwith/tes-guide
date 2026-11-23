@@ -42,6 +42,11 @@ curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh
 
 1. 설치 중 `주 업무 폴더 경로`를 묻습니다. 모르면 그냥 Enter를 누릅니다(최근 업무 파일을 알아서 찾습니다). 업무 파일을 모아 둔 폴더가 있으면 그 경로를 넣습니다.
 2. 마지막에 `발견 파일 수`, `본문 추출 수`, `설치 완료`가 나오면 됩니다.
+
+![PowerShell 설치 완료와 발견 파일 수와 본문 추출 수가 보이는 장면](/images/rnd/r3-01-install.jpg)
+
+기억 자동 정리 등록이 실패해도 설치는 끝난 것입니다.
+
 3. 이어서 설치된 폴더가 파일 탐색기(Mac은 Finder)로 열립니다. 확인만 하고 닫아도 됩니다. Codex에서 여는 것은 3교시에 합니다.
 
 설치 위치는 Windows `문서\3교시-Codex-활용하기`(OneDrive를 쓰는 PC는 `OneDrive\문서\3교시-Codex-활용하기`), Mac `~/Documents/3교시-Codex-활용하기`입니다.
@@ -63,6 +68,9 @@ curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh
 
 4. 폴더 고르는 창 왼쪽에서 **바탕 화면**을 누르고, 압축을 푼 `2교시-Codex-응용하기` 폴더를 한 번 눌러 고른 뒤 **폴더 선택**을 누릅니다. 폴더 안으로 들어가지 말고 고른 상태에서 누릅니다.
 5. 맨 위 프로젝트 이름 칸에 `2교시-Codex-응용하기`을 적고 오른쪽 아래 **프로젝트 만들기**를 누릅니다.
+
+![2교시 프로젝트가 Codex 사이드바에 보이는 장면](/images/rnd/r2-01-project.jpg)
+
 6. "이 폴더를 신뢰할까요?" 창이 뜨면 경로 끝이 `2교시-Codex-응용하기`인지 보고 **폴더 신뢰**를 누릅니다.
 7. 입력창 바로 위에 `2교시-Codex-응용하기`가 보이면 연결된 것입니다. 대화창에 아래 한 줄을 보냅니다.
 
@@ -70,7 +78,13 @@ curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh
 @lab2
 ```
 
+![`@lab2`를 선택한 뒤 첫 안내 답이 보이는 장면](/images/rnd/r2-02-lab2-first.jpg)
+
 Codex가 2교시 전체 보기와 자료 확인 결과(`준비 완료: data 파일 4개…`)를 보여 주고, 바로 STEP 1 설명과 첫 요청문을 이어서 보여 줍니다.
+
+![STEP 1 업무 파악 답이 보이는 결과 예시](/images/rnd/r2-s1-answer.jpg)
+
+![런 수·기간·챔버를 확인한 STEP 1 결과 자료의 결과 예시](/images/rnd/r2-s1-answer-data.jpg)
 
 ### 진행 방법
 
@@ -108,6 +122,22 @@ Codex가 2교시 전체 보기와 자료 확인 결과(`준비 완료: data 파�
 | 5. ④ 검토 | 숫자 하나는 내 눈으로 맞추고, 원인은 '후보'로 정리합니다 | `대시보드 숫자 중 대조용 3개를 골라 원자료 어느 파일 몇 번째 줄에서 찾으면 되는지 알려 줘` → (숫자 하나를 직접 대조한 뒤) `이상 구간 3곳마다 원인 후보를 근거 숫자와 반대 증거로 표에 정리해 줘` | 알려 준 줄을 메모장·엑셀로 직접 열어 맞춰 봤는지(머리글이 1번째 줄). 후보마다 근거 숫자와 반대 증거가 있고 "확정"이라고 쓰지 않았는지 |
 | 6. ⑤ 개선(조정) | 세팅 조합을 받아 가상 장비 계산기에 넣어 봅니다 | `DOE 결과로 간격·압력과 균일도 관계를 간단히 모델로 만들고, CH1 균일도를 기준 이하로 되돌릴 조합을 2개 제안해 줘` | 제안값을 `tools/virtual-chamber.html`(더블클릭 → 챔버 CH1 → spacing·pressure 입력)에 넣어 "목표 이내"가 나오는지 |
 | 7. ⑤ 개선(고치기·보고) | 그림 하나만 고치고, 오늘 분석을 한 장 보고로 정리합니다 | `2번 그림만 챔버 색을 구분해서 다시 그려 줘. 다른 건 그대로` → `오늘 분석을 한 장 보고로 정리해 줘: 현상 → 근거 → 원인 후보 → 조정안 → 확인할 것` | 다른 그림이 그대로인지, 한 장 보고에 조정안과 "실제 조정은 담당자 판단"이 있는지 |
+
+![관점 5개와 지표·그림 선택지가 펼쳐진 STEP 2 결과 예시](/images/rnd/r2-s2-views.jpg)
+
+![런 지표와 이상 구간을 표로 정리한 STEP 3 결과 예시](/images/rnd/r2-s3-table.jpg)
+
+![가상 PECVD CH1·CH2 추이와 PM·레시피 변경 세로선이 보이는 STEP 4 결과 예시](/images/rnd/r2-s4-dashboard.jpg)
+
+![중앙-가장자리와 편심 추이가 보이는 STEP 4 대시보드 하단 결과 예시](/images/rnd/r2-s4-dashboard-2.jpg)
+
+![대조용 파일과 숫자 근거를 정리한 STEP 5 결과 예시](/images/rnd/r2-s5-review.jpg)
+
+![DOE 기반 조정안과 모델 결과를 연 STEP 6 결과 예시](/images/rnd/r2-s6-proposal.jpg)
+
+![챔버 비교 그림을 다시 연 STEP 7 결과 예시](/images/rnd/r2-s7-redraw.jpg)
+
+![현상·근거·원인 후보·조정안·확인할 것을 정리한 STEP 7 결과 예시](/images/rnd/r2-s7-report.jpg)
 
 화살표(→)로 이어진 요청문은 하나씩 따로 보냅니다. Codex 화면에는 지금 보낼 요청문 하나만 나오니, 화면의 지금 보낼 말을 그대로 보내면 됩니다.
 

@@ -1,0 +1,276 @@
+[
+  {
+    "file": "r1-01-unzip.jpg",
+    "page": "lab-1",
+    "step": "1교시 준비 폴더 받기",
+    "alt": "바탕 화면에 압축을 푼 1교시 실습 폴더가 보이는 장면"
+  },
+  {
+    "file": "r1-02-folder-pick.jpg",
+    "page": "lab-1",
+    "step": "1교시 프로젝트 폴더 고르기",
+    "alt": "새 프로젝트에서 1교시 폴더를 선택하는 창"
+  },
+  {
+    "file": "r1-03-project-create.jpg",
+    "page": "lab-1",
+    "step": "1교시 프로젝트 만들기",
+    "alt": "선택한 1교시 폴더가 들어간 프로젝트 만들기 창"
+  },
+  {
+    "file": "r1-04-trust.jpg",
+    "page": "lab-1",
+    "step": "1교시 폴더 신뢰",
+    "alt": "프로젝트 폴더를 신뢰할지 묻는 Codex 화면"
+  },
+  {
+    "file": "r1-05-at-lab1.jpg",
+    "page": "lab-1",
+    "step": "1교시 @lab1 선택",
+    "alt": "입력창에 @lab1을 입력해 스킬 후보를 고르는 장면"
+  },
+  {
+    "file": "r1-06-lab1-first.jpg",
+    "page": "lab-1",
+    "step": "1교시 @lab1 첫 답",
+    "alt": "@lab1 첫 답과 다음에 보낼 말이 보이는 장면",
+    "skipped": true,
+    "reason": "현재 새 채팅에서 첫 답 장면을 같은 상태로 재현하지 못해 파일을 만들지 않음"
+  },
+  {
+    "file": "r1-07-block1-result.jpg",
+    "page": "lab-1",
+    "step": "1교시 블록 1 다운로드 정리",
+    "alt": "다운로드 정리 요청 뒤 파일이 여러 폴더로 분류된 결과"
+  },
+  {
+    "file": "r1-08-settings.jpg",
+    "page": "lab-1",
+    "step": "1교시 설정 메뉴 열기",
+    "alt": "좌측 하단 계정 메뉴에서 설정 항목을 연 장면"
+  },
+  {
+    "file": "r1-09-plugins.jpg",
+    "page": "lab-1",
+    "step": "1교시 설정의 통합 플러그인",
+    "alt": "플러그인과 스킬과 MCP를 관리하는 설정 화면"
+  },
+  {
+    "file": "r1-10-market-add.jpg",
+    "page": "lab-1",
+    "step": "1교시 마켓플레이스 추가",
+    "alt": "GPTaku 플러그인 마켓플레이스 주소를 입력한 창"
+  },
+  {
+    "file": "r1-11-plugin-list.jpg",
+    "page": "lab-1",
+    "step": "1교시 GPTaku 플러그인 목록",
+    "alt": "등록된 GPTaku 플러그인 목록이 보이는 화면"
+  },
+  {
+    "file": "r1-12-installed.jpg",
+    "page": "lab-1",
+    "step": "1교시 플러그인 설치 완료",
+    "alt": "Insane Research와 Pumasi가 설치된 플러그인 화면"
+  },
+  {
+    "file": "r1-13-issues.jpg",
+    "page": "lab-1",
+    "step": "1교시 블록 3 이슈 조사",
+    "alt": "outputs/오늘이슈.md가 저장되고 세 가지 이슈가 제시된 답"
+  },
+  {
+    "file": "r1-14-image.jpg",
+    "page": "lab-1",
+    "step": "1교시 블록 3 이미지 생성",
+    "alt": "슈퍼문과 플레이아데스성단 이미지가 Codex 답에 표시된 장면"
+  },
+  {
+    "file": "r1-15-html.jpg",
+    "page": "lab-1",
+    "step": "1교시 블록 3 HTML 열기",
+    "alt": "생성한 이슈설명 HTML을 Chrome에서 연 장면"
+  },
+  {
+    "file": "r2-01-project.jpg",
+    "page": "lab-2",
+    "step": "2교시 프로젝트 열기",
+    "alt": "2교시 프로젝트가 Codex 사이드바에 보이는 장면"
+  },
+  {
+    "file": "r2-02-lab2-first.jpg",
+    "page": "lab-2",
+    "step": "2교시 @lab2 첫 답",
+    "alt": "@lab2를 선택한 뒤 첫 안내 답이 보이는 장면"
+  },
+  {
+    "file": "r3-01-install.jpg",
+    "page": "lab-3",
+    "step": "3교시 업무 공간 설치",
+    "alt": "PowerShell 설치 완료와 발견 파일 수와 본문 추출 수가 보이는 장면"
+  },
+  {
+    "file": "r3-03-onboard.jpg",
+    "page": "lab-3",
+    "step": "3교시 @onboard 시작",
+    "alt": "3교시 프로젝트에서 @onboard 첫 답이 보이는 장면"
+  },
+  {
+    "file": "r2-s1-answer.jpg",
+    "page": "lab-2",
+    "step": "STEP 1 업무 파악 답",
+    "alt": "2교시 Codex 새 대화에서 장비 데이터 분석 흐름과 첫 요청문이 보이는 화면"
+  },
+  {
+    "file": "r2-s1-answer-data.jpg",
+    "page": "lab-2",
+    "step": "STEP 1 결과 자료",
+    "alt": "런 수·기간·챔버를 확인한 2교시 결과 자료 화면"
+  },
+  {
+    "file": "r2-s2-views.jpg",
+    "page": "lab-2",
+    "step": "STEP 2 관점 5개",
+    "alt": "관점 5개와 지표·그림 선택지가 펼쳐진 결과 화면"
+  },
+  {
+    "file": "r2-s2-plan.jpg",
+    "page": "lab-2",
+    "step": "STEP 2 계획.md",
+    "alt": "계획.md에 목적·지표·그림·확인할 가설이 정리된 화면"
+  },
+  {
+    "file": "r2-s3-table.jpg",
+    "page": "lab-2",
+    "step": "STEP 3 숫자 표",
+    "alt": "런 지표와 이상 구간을 표로 정리한 화면"
+  },
+  {
+    "file": "r2-s4-dashboard.jpg",
+    "page": "lab-2",
+    "step": "STEP 4 HTML 대시보드 상단",
+    "alt": "가상 PECVD CH1·CH2 추이와 PM·레시피 변경 세로선이 보이는 브라우저 화면"
+  },
+  {
+    "file": "r2-s4-dashboard-2.jpg",
+    "page": "lab-2",
+    "step": "STEP 4 HTML 대시보드 하단",
+    "alt": "중앙-가장자리와 편심 추이가 보이는 대시보드 하단 화면"
+  },
+  {
+    "file": "r2-s5-lookup.jpg",
+    "page": "lab-2",
+    "step": "STEP 5 원자료 대조",
+    "alt": "대조용 파일과 숫자 근거를 정리한 화면"
+  },
+  {
+    "file": "r2-s5-csv.jpg",
+    "page": "lab-2",
+    "step": "STEP 5 원자료 줄",
+    "alt": "data/runs.csv 원자료 일부를 브라우저로 연 화면"
+  },
+  {
+    "file": "r2-s5-review.jpg",
+    "page": "lab-2",
+    "step": "STEP 5 원인 후보",
+    "alt": "검토 결과와 이상 원인 후보를 정리한 화면"
+  },
+  {
+    "file": "r2-s5-causes.jpg",
+    "page": "lab-2",
+    "step": "STEP 5 원인 후보 표",
+    "alt": "이상 구간별 원인 후보 표 화면"
+  },
+  {
+    "file": "r2-s6-proposal.jpg",
+    "page": "lab-2",
+    "step": "STEP 6 조정안",
+    "alt": "DOE 기반 조정안과 모델 결과를 연 화면"
+  },
+  {
+    "file": "r2-s6-chamber.jpg",
+    "page": "lab-2",
+    "step": "STEP 6 가상 챔버",
+    "alt": "가상 챔버 계산기를 브라우저로 연 화면"
+  },
+  {
+    "file": "r2-s7-redraw.jpg",
+    "page": "lab-2",
+    "step": "STEP 7 그림 다시 그리기",
+    "alt": "챔버 비교 그림을 다시 연 화면"
+  },
+  {
+    "file": "r2-s7-report.jpg",
+    "page": "lab-2",
+    "step": "STEP 7 한 장 보고",
+    "alt": "현상·근거·원인 후보·조정안·확인할 것을 정리한 보고 화면"
+  },
+  {
+    "file": "r2-wrap.jpg",
+    "page": "lab-2",
+    "step": "2교시 정리",
+    "alt": "2교시 결과 파일과 단계별 산출물을 정리한 화면"
+  },
+  {
+    "file": "r3-s1-project.jpg",
+    "page": "lab-3",
+    "step": "3교시 프로젝트 @onboard 후보",
+    "alt": "3교시 프로젝트 새 채팅에서 Onboard 스킬 후보가 보이는 Codex 화면"
+  },
+  {
+    "file": "r3-s2-onboard-q.jpg",
+    "page": "lab-3",
+    "step": "온보딩 첫 질문",
+    "alt": "온보딩 첫 질문과 번호 선택지가 보이는 Codex 화면"
+  },
+  {
+    "file": "r3-s2-onboard-q2.jpg",
+    "page": "lab-3",
+    "step": "온보딩 중간 질문",
+    "alt": "온보딩 자료 범위와 다음 번호 선택지가 보이는 Codex 화면"
+  },
+  {
+    "file": "r3-s2-plan.jpg",
+    "page": "lab-3",
+    "step": "첫 결과물 계획",
+    "alt": "PPT 초안 계획과 승인 선택지가 보이는 Codex 화면"
+  },
+  {
+    "file": "r3-s3-result.jpg",
+    "page": "lab-3",
+    "step": "첫 결과물 열기",
+    "alt": "결과 보고서 문서 내용이 Codex 결과물 패널에 열린 화면"
+  },
+  {
+    "file": "r3-s3-ppt.jpg",
+    "page": "lab-3",
+    "step": "@ppt-draft 시도",
+    "alt": "@ppt-draft 승인 뒤 PPTX 생성 스크립트가 실행 중인 Codex 화면"
+  },
+  {
+    "file": "r3-s4-fix.jpg",
+    "page": "lab-3",
+    "step": "결과 한 번 고치기",
+    "alt": "결론을 맨 위로 올린 답과 보고서 변경 diff가 보이는 Codex 화면"
+  },
+  {
+    "file": "r3-s5-skill-folder.jpg",
+    "page": "lab-3",
+    "step": "내 스킬 폴더",
+    "alt": "3교시 프로젝트 .agents skills 폴더가 탐색기에 열린 화면"
+  },
+  {
+    "file": "r3-s6-memory.jpg",
+    "page": "lab-3",
+    "step": "memory 폴더",
+    "alt": "memory 폴더의 daily와 candidates.md가 탐색기에 보이는 화면"
+  },
+  {
+    "page": "lab-3",
+    "step": "내 스킬 만들기 답",
+    "alt": "내 스킬 만들기 요청 뒤 Codex 답",
+    "skipped": true,
+    "reason": "이번 화면 세션에서 요청 답변 장면을 재현하지 못함",
+    "file": "r3-s5-skill.jpg"
+  }
+]
