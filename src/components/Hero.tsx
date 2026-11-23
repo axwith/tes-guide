@@ -120,6 +120,9 @@ export function Hero() {
         </p>
 
         {/* 과정별 당일 안내 */}
+        <div className="mx-auto mb-3 max-w-3xl text-left">
+          <h2 className="text-sm font-semibold text-zinc-700 dark:text-zinc-300">과정별 당일 안내</h2>
+        </div>
         <div className="mx-auto mb-10 grid max-w-3xl gap-3 text-left sm:grid-cols-2">
           {courses.map((c) => (
             <a

@@ -25,8 +25,10 @@ export function CourseHero({ courseLabel, dateLine, periods, other }: CourseHero
           <span className="text-brand-500 dark:text-brand-400">{courseLabel}</span> 당일 안내
         </h1>
 
-        <p className="mb-8 text-lg text-zinc-500 dark:text-zinc-400">
-          1교시부터 3교시까지 순서대로 따라 합니다. 연구소 과정은 2교시에서 직무에 맞는 데이터 트랙을 선택합니다. 실습 폴더를 먼저 받아 두세요.
+        <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-zinc-500 dark:text-zinc-400">
+          1교시부터 3교시까지 순서대로 따라 합니다.<br />
+          연구소 과정은 2교시에서 직무에 맞는 데이터 트랙을 선택합니다.<br />
+          실습 폴더를 먼저 받아 두세요.
         </p>
 
         <ol className="mx-auto mb-8 grid max-w-3xl gap-3 text-left sm:grid-cols-3">
