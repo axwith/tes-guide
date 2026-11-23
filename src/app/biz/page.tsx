@@ -20,7 +20,7 @@ export default function MixedPage() {
             { num: '2', title: '2교시 Codex 응용하기', desc: '운영 또는 재무 자료를 분석하고 대시보드와 한 장 보고서로 정리합니다.' },
             { num: '3', title: '3교시 Codex 활용하기', desc: '내 업무 공간을 만들고, 반복해서 쓸 수 있는 스킬과 결과물을 만듭니다.' },
           ]}
-          other={{ href: '/rnd/', label: '연구소 과정 안내' }}
+          other={{ href: '/', label: '사전 준비 안내' }}
         />
       }
     />
