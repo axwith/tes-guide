@@ -95,11 +95,11 @@ Codex가 안내하는 파일 생성 요청을 그대로 따라 합니다. 예를
 
 1. 아래 주소를 복사합니다.
 
-   **[GPTaku Codex 마켓플레이스](https://github.com/fivetaku/gptaku-plugins-codex)**
+   **[GPTaku 플러그인 마켓플레이스](https://github.com/fivetaku/gptaku_plugins)**
 
 2. Codex의 플러그인 메뉴를 엽니다. 화면에 `/plugins`를 입력하거나 왼쪽 메뉴의 **Plugins**를 선택합니다.
 3. **Marketplace 추가** 또는 **Add marketplace**를 선택합니다.
-4. 방금 복사한 GPTaku Codex 마켓플레이스 주소를 붙여 넣고 등록합니다.
+4. 방금 복사한 GPTaku 플러그인 마켓플레이스 주소를 붙여 넣고 등록합니다.
 5. 등록된 마켓플레이스에서 **Insane Search Codex**, **Insane Research Codex**를 찾아 설치합니다.
 6. 목록에 마켓플레이스가 보이지 않거나 등록에 실패하면 앱을 완전히 끄고 다시 켠 뒤 강사에게 알립니다.
 7. 설치가 끝나면 **새 대화**를 엽니다. 설치한 플러그인은 새 대화에서 사용합니다.
