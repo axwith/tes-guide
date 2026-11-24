@@ -107,13 +107,13 @@
     "file": "r3-01-install.jpg",
     "page": "lab-3",
     "step": "3교시 업무 공간 설치",
-    "alt": "PowerShell 설치 완료와 발견 파일 수와 본문 추출 수가 보이는 장면"
+    "alt": "PowerShell 설치 완료와 발견 파일 225개, 본문 추출 80개, tes-workmate 경로가 보이는 장면"
   },
   {
     "file": "r3-03-onboard.jpg",
     "page": "lab-3",
     "step": "3교시 @onboard 시작",
-    "alt": "3교시 프로젝트에서 @onboard 첫 답이 보이는 장면"
+    "alt": "tes-workmate 프로젝트에서 @onboard 첫 답과 설치 자료 사전 스캔 결과가 보이는 Codex 화면"
   },
   {
     "file": "r2-s1-answer.jpg",
@@ -221,7 +221,7 @@
     "file": "r3-s2-onboard-q.jpg",
     "page": "lab-3",
     "step": "온보딩 첫 질문",
-    "alt": "온보딩 첫 질문과 번호 선택지가 보이는 Codex 화면"
+    "alt": "가상 연구소 공정개발 엔지니어 온보딩의 이름·소속 입력 선택지가 보이는 Codex 화면"
   },
   {
     "file": "r3-s2-onboard-q2.jpg",
@@ -233,13 +233,13 @@
     "file": "r3-s2-plan.jpg",
     "page": "lab-3",
     "step": "첫 결과물 계획",
-    "alt": "PPT 초안 계획과 승인 선택지가 보이는 Codex 화면"
+    "alt": "공정개발 월간 업무 보고서 첫 결과물 계획과 승인 선택지가 보이는 Codex 화면"
   },
   {
     "file": "r3-s3-result.jpg",
     "page": "lab-3",
     "step": "첫 결과물 열기",
-    "alt": "결과 보고서 문서 내용이 Codex 결과물 패널에 열린 화면"
+    "alt": "tes-workmate 프로젝트의 공정개발 월간 업무 보고서 내용이 Codex 결과물 패널에 열린 화면"
   },
   {
     "file": "r3-s3-ppt.jpg",
@@ -251,7 +251,7 @@
     "file": "r3-s4-fix.jpg",
     "page": "lab-3",
     "step": "결과 한 번 고치기",
-    "alt": "결론을 맨 위로 올린 답과 보고서 변경 diff가 보이는 Codex 화면"
+    "alt": "결론을 맨 위로 올렸다는 답과 수정된 업무 보고서 변경 카드가 보이는 Codex 화면"
   },
   {
     "file": "r3-s5-skill-folder.jpg",
@@ -272,5 +272,11 @@
     "skipped": true,
     "reason": "이번 화면 세션에서 요청 답변 장면을 재현하지 못함",
     "file": "r3-s5-skill.jpg"
+  },
+  {
+    "file": "r3-02-folder.jpg",
+    "page": "lab-3",
+    "step": "r3-02-folder",
+    "alt": "개인정보를 가린 tes-workmate 설치 폴더와 주요 파일·폴더 이름이 보이는 탐색기 화면"
   }
 ]
