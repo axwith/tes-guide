@@ -83,13 +83,13 @@
     "file": "r1-14-image.jpg",
     "page": "lab-1",
     "step": "1교시 블록 3 이미지 생성",
-    "alt": "슈퍼문과 플레이아데스성단 이미지가 Codex 답에 표시된 장면"
+    "alt": "1번 이슈(한지 제작 전통) 설명 그림이 Codex 답에 표시된 장면"
   },
   {
     "file": "r1-15-html.jpg",
     "page": "lab-1",
     "step": "1교시 블록 3 HTML 열기",
-    "alt": "생성한 이슈설명 HTML을 Chrome에서 연 장면"
+    "alt": "생성한 이슈설명 HTML을 브라우저에서 연 장면"
   },
   {
     "file": "r2-01-project.jpg",
