@@ -140,7 +140,7 @@ GPTaku 플러그인 마켓을 등록해 줘
 3. 아래 표의 13개를 옆의 **+** 로 설치합니다(`gptaku-core` 먼저).
 4. **공개** 탭에는 Gmail·Teams·Canva·Figma 같은 일반 서비스 플러그인이 있습니다. 오늘은 설치하지 않고, 나중에 필요한 것을 같은 방법으로 설치해 씁니다.
 
-![등록된 GPTaku 플러그인 목록이 보이는 화면](/images/rnd/r1-11-plugin-list.jpg)
+![맞춤 설정 → 플러그인 → 개인용 탭의 GPTaku plugins 목록과 '더 보기'](/images/rnd/r1-11-plugin-list.jpg)
 
 | 플러그인 | 오늘 | 한 줄 설명 |
 |---|---|---|
@@ -166,7 +166,7 @@ GPTaku 플러그인 마켓을 등록해 줘
 오늘 쓸 GPTaku 플러그인 13개를 설치해 줘
 ```
 
-![Insane Research와 Pumasi가 설치된 플러그인 화면](/images/rnd/r1-12-installed.jpg)
+![GPTaku plugins 전체 목록에서 13개를 설치해 왼쪽 설치됨에 보이는 화면](/images/rnd/r1-12-installed.jpg)
 
 **확인할 것:** 승인 창이 뜨면 승인합니다. 표의 13개가 설치됨으로 보이는지 봅니다. 특히 `insane-research`와 `pumasi`.
 

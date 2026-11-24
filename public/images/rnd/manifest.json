@@ -65,13 +65,13 @@
     "file": "r1-11-plugin-list.jpg",
     "page": "lab-1",
     "step": "1교시 GPTaku 플러그인 목록",
-    "alt": "등록된 GPTaku 플러그인 목록이 보이는 화면"
+    "alt": "맞춤 설정 → 플러그인 → 개인용 탭의 GPTaku plugins 목록과 '더 보기'"
   },
   {
     "file": "r1-12-installed.jpg",
     "page": "lab-1",
     "step": "1교시 플러그인 설치 완료",
-    "alt": "Insane Research와 Pumasi가 설치된 플러그인 화면"
+    "alt": "GPTaku plugins 전체 목록에서 13개를 설치해 왼쪽 설치됨에 보이는 화면"
   },
   {
     "file": "r1-13-issues.jpg",
