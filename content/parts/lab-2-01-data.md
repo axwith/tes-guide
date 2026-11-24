@@ -49,9 +49,9 @@ curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh
 
 3. 이어서 설치된 폴더가 파일 탐색기(Mac은 Finder)로 열립니다. 확인만 하고 닫아도 됩니다. Codex에서 여는 것은 3교시에 합니다.
 
-설치 위치는 Windows `문서\3교시-Codex-활용하기`(OneDrive를 쓰는 PC는 `OneDrive\문서\3교시-Codex-활용하기`), Mac `~/Documents/3교시-Codex-활용하기`입니다.
+설치 위치는 Windows `문서\tes-workmate`(OneDrive를 쓰는 PC는 `OneDrive\문서\tes-workmate`), Mac `~/Documents/tes-workmate`입니다.
 
-이미 `tes-workmate`라는 이름으로 설치한 적이 있어도 같은 명령을 실행합니다. 새 폴더 `3교시-Codex-활용하기`가 따로 생기고, 3교시에는 새 폴더를 씁니다.
+이미 `tes-workmate`를 설치한 적이 있어도 같은 명령을 실행합니다. 같은 폴더에 기본 스킬만 새 버전으로 바뀌고, 기억·규칙·업무 폴더는 그대로 남습니다.
 
 ---
 
@@ -182,7 +182,7 @@ outputs 에 오늘 남은 파일을 5단계(업무 파악·기획·만들기·�
 
 `outputs/` 안의 계획.md, 분석 표, 대시보드, 검토 표, 조정안, 한 장 보고. 이 분석 절차는 3교시에 내 업무 공간의 스킬로 만듭니다.
 
-3교시에는 `3교시-Codex-활용하기` 폴더를 열고 `@onboard`를 보냅니다.
+3교시에는 `tes-workmate` 폴더를 열고 `@onboard`를 보냅니다.
 
 ---
 
