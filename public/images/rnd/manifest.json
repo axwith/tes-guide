@@ -278,5 +278,11 @@
     "page": "lab-3",
     "step": "r3-02-folder",
     "alt": "개인정보를 가린 tes-workmate 설치 폴더와 주요 파일·폴더 이름이 보이는 탐색기 화면"
+  },
+  {
+    "file": "survey-qr.png",
+    "page": "lab-3",
+    "step": "교육 만족도 조사",
+    "alt": "교육 만족도 조사 QR 코드"
   }
 ]
