@@ -17,6 +17,13 @@ const courses = [
     when: '1회차 11월 24일(화) · 2회차 11월 25일(수)',
     desc: '1~3교시 순서, 실습 폴더 받기, 장비 런 데이터 실습',
   },
+  {
+    href: '/biz/',
+    ctaId: 'course_biz',
+    label: '혼합직무과정 센터',
+    when: '3회차 11월 26일(목)',
+    desc: '1~3교시 순서, 실습 폴더 받기, 웹 자료 분석·내 업무 공간',
+  },
 ]
 
 export function Hero() {
@@ -130,8 +137,8 @@ export function Hero() {
           ))}
         </ol>
 
-        {/* 연구소과정 센터 */}
-        <div className="mx-auto mt-10 max-w-3xl text-left">
+        {/* 과정 센터: 연구소 · 혼합직무 */}
+        <div className="mx-auto mt-10 grid max-w-3xl gap-3 text-left sm:grid-cols-2">
           {courses.map((c) => (
             <a
               key={c.href}
