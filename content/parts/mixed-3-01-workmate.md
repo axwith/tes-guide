@@ -29,20 +29,14 @@ next_clip_id: "mixed-9-01-help"
 
 ### 1. 설치 확인
 
-휴식 시간에 설치한 창에 `설치 완료:`가 보이면 됩니다. Windows `문서\tes-workmate`, Mac `~/Documents/tes-workmate` 폴더가 있는지 봅니다. 지금은 이 폴더에 내 파일을 넣지 않습니다.
+휴식 시간에 설치한 창에 `설치 완료:`가 보이면 됩니다. `문서\tes-workmate`(OneDrive를 쓰면 `OneDrive\문서\tes-workmate`) 폴더가 있는지 봅니다. 지금은 이 폴더에 내 파일을 넣지 않습니다.
 
 설치하지 않았다면 지금 붙여 넣습니다.
 
-- Windows: 시작 메뉴에서 `PowerShell`을 찾아 **Windows PowerShell**을 열고 붙여 넣은 뒤 Enter
+시작 메뉴에서 `PowerShell`을 찾아 **Windows PowerShell**을 열고 붙여 넣은 뒤 Enter를 누릅니다.
 
 ```powershell
 irm https://raw.githubusercontent.com/axwith/tes-workmate/main/get.ps1 | iex
-```
-
-- Mac: 터미널에 붙여 넣은 뒤 return
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh | bash
 ```
 
 `기본 검색에 더할 업무 폴더 경로`를 물으면 아무것도 넣지 말고 Enter를 누릅니다.
@@ -53,7 +47,7 @@ curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh
 
 1. Codex 앱 왼쪽 위 **새 채팅**을 누릅니다.
 2. 입력창 바로 위 **프로젝트 선택** → 목록 맨 아래 **새 프로젝트** → **추가**를 누릅니다.
-3. Windows는 **문서**(OneDrive를 쓰면 `OneDrive\문서`)에서, Mac은 `Documents`에서 `tes-workmate`를 한 번 눌러 고르고 **폴더 선택**을 누릅니다. 폴더 안으로 들어가서 고르지 않습니다.
+3. **문서**(OneDrive를 쓰면 `OneDrive\문서`)에서 `tes-workmate`를 한 번 눌러 고르고 **폴더 선택**을 누릅니다. 폴더 안으로 들어가서 고르지 않습니다.
 4. 프로젝트 이름이 `tes-workmate`인지 보고 **프로젝트 만들기**를 누릅니다.
 5. 폴더를 신뢰할지 물으면 경로 끝이 `tes-workmate`인지 보고 **폴더 신뢰**를 누릅니다.
 
@@ -245,7 +239,7 @@ curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh
 | 고쳐 주고 싶은 점이 있을 때 | `앞으로 항상 …` — `AGENTS.md` 5장 규칙이 됩니다 |
 | 같은 일을 또 할 때 | `스킬로 만들어 줘` — 다음부터 한 마디로 같은 순서를 밟습니다 |
 | 어제 하던 일을 이어 할 때 | **새 채팅**에서 프로젝트를 `tes-workmate`로 고르고 `지난번에 하던 ○○ 이어서 해 줘` |
-| ChatGPT에서 하던 일을 가져올 때 | `@chatgpt-import` — 고른 대화만 읽고, 내 업무·반복 업무·규칙을 뽑아 내가 승인한 것만 저장합니다 |
+| ChatGPT에서 하던 일을 더 가져올 때 | `@chatgpt-import 견적 비교 대화 찾아서 가져와 줘` — 주제에 맞는 대화를 찾아 읽고, 내 업무·반복 업무·규칙을 뽑아 내가 승인한 것만 저장합니다. 온보딩(`@onboard`) 때는 최근 대화를 묻지 않고 먼저 훑어 업무 후보로 보여 줍니다 |
 
 ChatGPT 대화는 Codex 앱에 로그인한 ChatGPT 계정에서 읽습니다. 읽지 못하면 ChatGPT **설정 → 데이터 제어 → 데이터 내보내기**로 받은 ZIP 파일을 `00-inbox`에 넣고 `ChatGPT 내보내기 파일 넣었어`라고 보냅니다. 개인정보와 고객사 이름은 가린 채로 저장합니다.
 
