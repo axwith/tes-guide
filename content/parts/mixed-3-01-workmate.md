@@ -175,7 +175,7 @@ irm https://raw.githubusercontent.com/axwith/tes-workmate/main/get.ps1 | iex
 
 **확인할 것:** 앞 채팅에서 남긴 `%p` 규칙을 답하는지 봅니다.
 
-![새 채팅에서 %p 규칙과 출처를 답한 화면](/images/mixed/m3-22-memory.jpg)
+![새 채팅에서 %p 규칙과 출처를 답한 화면](/images/mixed/m3-22b-memory.jpg)
 
 ### 11. 정리해 줘
 
@@ -184,6 +184,8 @@ irm https://raw.githubusercontent.com/axwith/tes-workmate/main/get.ps1 | iex
 ```
 
 **확인할 것:** `memory/daily/` 오늘 날짜 파일을 열어 숫자 점검·회의 준비·새 채팅에서 한 일이 적혔는지 봅니다. 답에는 마지막 채팅의 일만 나올 수 있으니 파일로 확인합니다.
+
+![정리해 줘 답과 memory/daily 기록 링크](/images/mixed/m3-24b-wrap.jpg)
 
 ### 12. 오늘 한 보고서를 스킬로 만들기 — 강사 시범
 
