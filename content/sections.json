@@ -193,7 +193,7 @@
       "order": 201,
       "slug": "mixed-overview",
       "title": "과정 안내",
-      "subtitle": "당일 순서, 실습 폴더 받기, Codex에서 폴더 열기",
+      "subtitle": "당일 순서, 교시마다 쓰는 폴더",
       "duration_min": null,
       "icon": "book-open",
       "badge": null,
@@ -209,7 +209,7 @@
       "order": 211,
       "slug": "mixed-warmup",
       "title": "1교시 Codex 시작하기",
-      "subtitle": "3교시 공간 설치 · 다운로드 폴더 정리로 다섯 단계 · insane-search·insane-research",
+      "subtitle": "1교시 폴더 받기 · 다운로드 폴더 정리 · 플러그인 설치 · 오늘 이슈 설명 자료 · 휴식 시간 3교시 설치",
       "duration_min": null,
       "icon": "sparkles",
       "badge": null,
@@ -225,7 +225,7 @@
       "order": 221,
       "slug": "mixed-data",
       "title": "2교시 Codex 응용하기",
-      "subtitle": "운영·재무 자료 분석 · 대시보드 · 검토 · 한 장 보고",
+      "subtitle": "2교시 폴더 받기 · 대상 고르기(무신사·크림·네이버 증권) · insane-search로 다섯 단계 · 분석 자료 HTML",
       "duration_min": null,
       "icon": "flask-conical",
       "badge": null,
@@ -241,7 +241,7 @@
       "order": 231,
       "slug": "mixed-workmate",
       "title": "3교시 Codex 활용하기",
-      "subtitle": "온보딩 → 회사 질문 → 2교시 분석을 내 스킬로 → 규칙 → 내 업무 한 건",
+      "subtitle": "온보딩 → 업무 보고서 → 숫자 점검 · 회의 준비 · 스킬 만들기 · 새 채팅 기억 · 정리해 줘",
       "duration_min": null,
       "icon": "folder-tree",
       "badge": null,
@@ -330,7 +330,7 @@
     },
     "mixed": {
       "label": "혼합직무 과정",
-      "description": "3회차 · 운영 또는 재무"
+      "description": "3회차 · 웹 자료로 분석 자료 만들기 · 내 업무 공간"
     }
   },
   "groups": {

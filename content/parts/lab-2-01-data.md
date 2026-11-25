@@ -40,7 +40,7 @@ irm https://raw.githubusercontent.com/axwith/tes-workmate/main/get.ps1 | iex
 curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh | bash
 ```
 
-1. 설치 중 `기본 검색에 더할 업무 폴더 경로`를 묻습니다. 모르면 그냥 Enter를 누릅니다(최근 업무 파일과 OneDrive·팀즈 동기화 폴더를 알아서 찾습니다). 업무 파일을 모아 둔 폴더가 따로 있으면 그 경로를 넣습니다.
+1. 설치 중 `기본 검색에 더할 업무 폴더 경로`를 묻습니다. 모르면 그냥 Enter를 누릅니다(최근 업무 파일과 OneDrive 같은 동기화 폴더를 알아서 찾습니다). 업무 파일을 모아 둔 폴더가 따로 있으면 그 경로를 넣습니다.
 2. 마지막에 `발견 파일 수`, `본문 추출 수`, `설치 완료`가 나오면 됩니다.
 
 ![PowerShell 설치 완료와 발견 파일 수와 본문 추출 수가 보이는 장면](/images/rnd/r3-01-install.jpg)
