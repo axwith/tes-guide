@@ -22,9 +22,12 @@ export default function MixedPage() {
           ]}
           introLines={[
             '1교시부터 3교시까지 강사 화면을 보며 같은 순서로 따라 합니다.',
-            '교시마다 실습 폴더가 따로 있습니다. 3교시 설치는 1교시가 끝난 휴식 시간에 합니다.',
+            '교시마다 실습 폴더가 따로 있습니다. 2교시 폴더와 3교시 설치는 1교시가 끝난 휴식 시간에 준비합니다.',
           ]}
-          downloads={[{ href: '/downloads/1교시-Codex-시작하기.zip', label: '1교시 폴더 받기' }]}
+          downloads={[
+            { href: '/downloads/1교시-Codex-시작하기.zip', label: '1교시 폴더 받기' },
+            { href: '/downloads/2교시-Codex-리서치.zip', label: '2교시 폴더 받기' },
+          ]}
           other={{ href: '/', label: '사전 준비 안내' }}
         />
       }
