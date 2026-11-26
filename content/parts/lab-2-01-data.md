@@ -67,7 +67,7 @@ curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh
    ![프로젝트 만들기 창의 소스 폴더 추가 버튼](/images/win/10.jpg)
 
 4. 폴더 고르는 창 왼쪽에서 **바탕 화면**을 누르고, 압축을 푼 `2교시-Codex-응용하기` 폴더를 한 번 눌러 고른 뒤 **폴더 선택**을 누릅니다. 폴더 안으로 들어가지 말고 고른 상태에서 누릅니다.
-5. 맨 위 프로젝트 이름 칸에 `2교시-Codex-응용하기`을 적고 오른쪽 아래 **프로젝트 만들기**를 누릅니다.
+5. 맨 위 프로젝트 이름 칸에 `2교시-Codex-응용하기`를 적고 오른쪽 아래 **프로젝트 만들기**를 누릅니다.
 
 ![2교시 프로젝트가 Codex 사이드바에 보이는 장면](/images/rnd/r2-01-project.jpg)
 
@@ -78,7 +78,9 @@ curl -fsSL https://raw.githubusercontent.com/axwith/tes-workmate/main/install.sh
 @lab2
 ```
 
-![`@lab2`를 선택한 뒤 첫 안내 답이 보이는 장면](/images/rnd/r2-02-lab2-first.jpg)
+후보가 보이면 맨 위 상자 모양 아이콘의 `Lab2`를 고릅니다(폴더 모양 `lab2`가 아닙니다).
+
+![`@lab2`를 보낸 직후 Codex가 안내 스킬을 읽는 장면](/images/rnd/r2-02-lab2-first.jpg)
 
 Codex가 2교시 전체 보기와 자료 확인 결과(`준비 완료: data 파일 4개…`)를 보여 주고, 바로 STEP 1 설명과 첫 요청문을 이어서 보여 줍니다.
 

@@ -19,7 +19,7 @@ next_clip_id: "mixed-9-01-help"
 - 회사 정보는 공개 자료로 만든 것이라 사내 사정과 다를 수 있습니다.
 - 이름·소속은 파일에서 짐작하지 않고, 온보딩에서 내가 직접 입력한 값만 씁니다.
 
-1교시에 설치하지 못했다면 1단계에서 설치 한 줄을 붙여 넣습니다.
+휴식 시간에 설치하지 못했다면 1단계에서 설치 한 줄을 붙여 넣습니다.
 
 ---
 
@@ -51,7 +51,7 @@ irm https://raw.githubusercontent.com/axwith/tes-workmate/main/get.ps1 | iex
 4. 프로젝트 이름이 `tes-workmate`인지 보고 **프로젝트 만들기**를 누릅니다.
 5. 폴더를 신뢰할지 물으면 경로 끝이 `tes-workmate`인지 보고 **폴더 신뢰**를 누릅니다.
 
-**확인할 것:** 입력창 바로 위에 `tes-workmate`가 보이는지 봅니다. `tes-lab`이 보이면 다른 폴더를 연 것입니다.
+**확인할 것:** 입력창 바로 위에 `tes-workmate`가 보이는지 봅니다. `1교시-Codex-시작하기`나 `2교시-Codex-리서치`가 보이면 다른 폴더를 연 것입니다.
 
 ### 3. `@onboard`로 시작하기 — 자료는 3번
 
@@ -65,7 +65,7 @@ irm https://raw.githubusercontent.com/axwith/tes-workmate/main/get.ps1 | iex
 
 자료 범위 번호가 나오면 오늘은 모두 `3`(가상 예시 자료로 연습)을 보냅니다. 자료를 볼 범위를 한 번 더 물으면 그때도 `3`을 보냅니다.
 
-첫 답은 3~5분쯤 걸립니다. 기다리는 동안 다른 말을 보내지 않습니다.
+첫 답은 몇 분 걸리고, PC에 따라 10분 넘게 걸리기도 합니다. 기다리는 동안 다른 말을 보내지 않습니다.
 
 ![업무 묶음과 자료 범위 1~3이 보이는 첫 답](/images/mixed/m3-05-onboard-step1.jpg)
 
@@ -195,7 +195,7 @@ irm https://raw.githubusercontent.com/axwith/tes-workmate/main/get.ps1 | iex
 방금 만든 월간 품질 보고서 순서를 스킬로 만들어 줘
 ```
 
-권한 창이 뜨면 저장 위치를 보고 승인합니다. 승인 방식은 **승인 요청** 그대로 둡니다. 승인한 뒤 왼쪽 아래가 **전체 액세스**로 바뀌어 있으면 눌러서 **승인 요청**으로 되돌립니다.
+권한 창이 뜨면 저장 위치를 보고 승인합니다. 승인 방식은 **승인 요청** 그대로 둡니다. 승인한 뒤 왼쪽 아래가 **전체 권한(Full access)**으로 바뀌어 있으면 눌러서 **승인 요청**으로 되돌립니다.
 
 ![스킬을 만들었다는 답과 저장 위치](/images/mixed/m3-20g-skill-made.jpg)
 
@@ -222,7 +222,7 @@ irm https://raw.githubusercontent.com/axwith/tes-workmate/main/get.ps1 | iex
 | 회사·업계 정보 | `memory/wiki/domain-context/` |
 | 결과물 | `reports/` |
 | "앞으로 항상" 규칙 | `AGENTS.md` 5장 |
-| 만든 스킬 | `.agents/skills/`, `AGENTS.md` 6장 |
+| 만든 스킬 | `.agents/skills/` 또는 `~/.codex/skills/`(Codex가 고른 곳), `AGENTS.md` 6장 |
 | 작업 기록, 스킬로 만들 만한 반복 작업 | `memory/daily/`, `memory/candidates.md` |
 
 ---
@@ -265,6 +265,14 @@ irm https://raw.githubusercontent.com/axwith/tes-workmate/main/get.ps1 | iex
 | ChatGPT에서 하던 일을 더 가져올 때 | `@chatgpt-import 견적 비교 대화 찾아서 가져와 줘` — 주제에 맞는 대화를 찾아 읽고, 내 업무·반복 업무·규칙을 뽑아 내가 승인한 것만 저장합니다. 온보딩(`@onboard`) 때는 최근 대화를 묻지 않고 먼저 훑어 업무 후보로 보여 줍니다 |
 
 ChatGPT 대화는 Codex 앱에 로그인한 ChatGPT 계정에서 읽습니다. 읽지 못하면 ChatGPT **설정 → 데이터 제어 → 데이터 내보내기**로 받은 ZIP 파일을 `00-inbox`에 넣고 `ChatGPT 내보내기 파일 넣었어`라고 보냅니다. 개인정보와 고객사 이름은 가린 채로 저장합니다.
+
+---
+
+## 교육 만족도 조사
+
+오늘 교육이 끝나면 휴대폰 카메라로 아래 QR 코드를 찍어 만족도 조사에 참여해 주세요. 1~2분이면 끝납니다.
+
+![교육 만족도 조사 QR 코드](/images/rnd/survey-qr.png)
 
 ---
 
